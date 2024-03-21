@@ -30,3 +30,4 @@ Configure the following parameters in the config:
 Ensure that the following dependency is installed:
 
 - `ox_lib`: [Download here](https://github.com/overextended/ox_lib.git)
+- `ox_inventory`: [Download here](https://github.com/overextended/ox_inventory.git)
