@@ -1,6 +1,5 @@
 --- @param id number The player's ID
 AddItems = function(id)
-    local ox_inventory = exports.ox_inventory
     for k, v in pairs(Config.Items) do
         exports.ox_inventory:AddItem(id, k, v)
     end
