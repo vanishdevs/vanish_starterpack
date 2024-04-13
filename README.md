@@ -4,7 +4,7 @@ This script provides a convenient way for players to receive starter packs conta
 
 ### Preview
 
-[Watch the video](https://cdn.discordapp.com/attachments/998425345806041088/1228806318756991049/vanish_starterpack.mp4?ex=662d6210&is=661aed10&hm=a68a3608529e82f4250bdb772e3a1b8eac0e23e258b6539abba1bc33c95978c8&)
+[Watch the video](https://streamable.com/5u1eo9)
 
 ### Features
 
