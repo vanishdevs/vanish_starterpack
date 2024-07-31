@@ -1,4 +1,8 @@
 ### Starter Pack Script
+![](https://img.shields.io/github/downloads/vanishdevs/vanish_starterpack/total?logo=github)
+![](https://img.shields.io/github/downloads/vanishdevs/vanish_starterpack/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/vanishdevs/vanish_starterpack?logo=github)
+![](https://img.shields.io/github/v/release/vanishdevs/vanish_starterpack?logo=github)
 
 This script provides a convenient way for players to receive starter packs containing predefined items by interacting with a designated NPC at a certain location. Below, you'll find everything you need to know about installing, configuring, and using this system effectively.
 
