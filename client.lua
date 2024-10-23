@@ -1,11 +1,11 @@
 CreateThread(function()
-    lib.requestModel(Config.Ped, 500)
+    lib.requestModel(Config.PedSettings.model, 500)
 
-    local ped = CreatePed(5, Config.Ped, Config.Coords.x, Config.Coords.y, Config.Coords.z, Config.Coords.w, false, true)
+    local ped = CreatePed(5, Config.PedSettings.model, Config.Coords.x, Config.Coords.y, Config.Coords.z, Config.Heading, false, true)
     FreezeEntityPosition(ped, true)
     SetEntityInvincible(ped, true)
     SetBlockingOfNonTemporaryEvents(ped, true)
-    TaskStartScenarioInPlace(ped, Config.PedAnim, 0, true)
+    TaskStartScenarioInPlace(ped, Config.PedSettings.anim, 0, true)
     local options = {
         {
             label = 'Starter Pack',
