@@ -24,6 +24,6 @@ RegisterNetEvent('vanishdev:server:ClaimStarterPack', function()
 
         MySQL.update('UPDATE users SET getStarter = ? WHERE identifier = ?', { 1, identifier })
 
-        ShowNotification(locale('recieved'))
+        ShowNotification(locale('recieved'), source)
     end
 end)
