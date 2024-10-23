@@ -1,3 +1,5 @@
+lib.versionCheck('vanishdevs/vanish_starterpack')
+
 lib.callback.register('vanishdev:server:CheckIfClaimed', function(source)
     local xPlayer = ESX.GetPlayerFromId(source)
     local identifier = xPlayer.identifier
