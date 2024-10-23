@@ -1,4 +1,4 @@
-### Starter Pack Script
+### Starter Pack
 ![](https://img.shields.io/github/downloads/vanishdevs/vanish_starterpack/total?logo=github)
 ![](https://img.shields.io/github/downloads/vanishdevs/vanish_starterpack/latest/total?logo=github)
 ![](https://img.shields.io/github/contributors/vanishdevs/vanish_starterpack?logo=github)
@@ -29,13 +29,14 @@ This script provides a convenient way for players to receive starter packs conta
 Configure the following parameters in the config:
 
 - `Coords`: The position where the NPC will be located.
-- `Ped`: The model of the NPC (can be found in FiveM docs about peds).
-- `PedAnim`: The scenario the NPC will be performing while standing.
+- `Heading`: The heading of the NPC (where it will be facing).
+- `PedSettings`: The model & animation of the NPC (can be found in FiveM docs about peds).
 - `Items`: The contents of the starter pack, defined as a table where the key is the item name and the value is the quantity.
 
 ### Dependencies
 
 Ensure that the following dependency is installed:
 
+- `es_extended`: [Download here](https://github.com/esx-framework/esx_core.git)
 - `ox_lib`: [Download here](https://github.com/overextended/ox_lib.git)
 - `ox_inventory`: [Download here](https://github.com/overextended/ox_inventory.git)
