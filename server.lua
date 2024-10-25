@@ -19,7 +19,7 @@ RegisterNetEvent('vanishdev:server:ClaimStarterPack', function()
     local playerPed = GetPlayerPed(source)
     local playerCoords = GetEntityCoords(playerPed)
 
-    if xPlayer and #(playerCoords - Config.Coords) < 5.0 then
+    if player and #(playerCoords - Config.Coords) < 5.0 then
         GiveInventoryItems(player, Config.Items)
         UpdateClaimed(playerIdentifier)
         ShowNotification(locale('recieved'), source)
