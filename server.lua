@@ -1,7 +1,7 @@
 lib.versionCheck('vanishdevs/vanish_starterpack')
 
-lib.callback.register('vanishdev:server:CheckIfClaimed', function(source)
-    local player = GetPlayer(source)
+local function CheckIfClaimed(playerId)
+    local player = GetPlayer(playerId)
     local playerIdentifier = GetIdentifier(player)
     local result = CheckClaimed(playerIdentifier)
     
@@ -10,6 +10,10 @@ lib.callback.register('vanishdev:server:CheckIfClaimed', function(source)
     end
     
     return true
+end
+
+lib.callback.register('vanishdev:server:CheckIfClaimed', function(source)
+    return CheckIfClaimed(source)
 end)
 
 RegisterNetEvent('vanishdev:server:ClaimStarterPack', function()
@@ -18,8 +22,9 @@ RegisterNetEvent('vanishdev:server:ClaimStarterPack', function()
     local playerIdentifier = GetIdentifier(player)
     local playerPed = GetPlayerPed(source)
     local playerCoords = GetEntityCoords(playerPed)
+    local hasClaimed = CheckIfClaimed(source)
 
-    if player and #(playerCoords - Config.Coords) < 5.0 then
+    if player and not hasClaimed and #(playerCoords - Config.Coords) < 5.0 then
         GiveInventoryItems(player, Config.Items)
         UpdateClaimed(playerIdentifier)
         ShowNotification(locale('recieved'), source)
