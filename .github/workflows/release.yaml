@@ -49,7 +49,7 @@ jobs:
         run: |
           mkdir -p ./temp/vanish_starterpack
           cp ./{LICENSE,README.md,install.sql,client.lua,server.lua,fxmanifest.lua} ./temp/vanish_starterpack
-          cp -r ./{locales,shared} ./temp/vanish_starterpack
+          cp -r ./{bridge,locales,shared} ./temp/vanish_starterpack
           cd ./temp && zip -r ../vanish_starterpack.zip ./vanish_starterpack
 
       - name: Create Release
