@@ -9,7 +9,7 @@ lib.callback.register('vanishdev:server:CheckIfClaimed', function(source)
         return result == 1
     end
     
-    return false
+    return true
 end)
 
 RegisterNetEvent('vanishdev:server:ClaimStarterPack', function()

@@ -13,7 +13,7 @@ CreateThread(function()
             distance = 3.0,
             onSelect = function()
                 local hasClaimed = lib.callback.await('vanishdev:server:CheckIfClaimed', false)
-                if not hasClaimed then return ShowNotification(locale("alreadyrecieved")) end
+                if hasClaimed then return ShowNotification(locale("alreadyrecieved")) end
 
                 TriggerServerEvent("vanishdev:server:ClaimStarterPack")
             end
