@@ -22,5 +22,5 @@ function CheckClaimed(identifier)
 end
 
 function UpdateClaimed(identifier)
-    MySQL.update('UPDATE users SET characters = ? WHERE stateId = ?', { 1, identifier })
+    MySQL.update('UPDATE characters SET getStarter = ? WHERE stateId = ?', { 1, identifier })
 end
