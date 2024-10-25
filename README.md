@@ -37,6 +37,6 @@ Configure the following parameters in the config:
 
 Ensure that the following dependencies is installed:
 
-- `esx, qb, qbox, ox_core`
+- `esx, qb, qbox, or ox_core`
 - `ox_lib`: [Download here](https://github.com/overextended/ox_lib.git)
 - `ox_inventory`: [Download here](https://github.com/overextended/ox_inventory.git) (if applicable)
