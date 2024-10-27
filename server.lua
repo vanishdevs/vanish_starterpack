@@ -1,5 +1,7 @@
 lib.versionCheck('vanishdevs/vanish_starterpack')
 
+---@param playerId (number) The ID of the player to check
+---@return boolean
 local function CheckIfClaimed(playerId)
     local player = GetPlayer(playerId)
     local playerIdentifier = GetIdentifier(player)
