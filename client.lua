@@ -1,7 +1,12 @@
-CreateThread(function()
-    lib.requestModel(Config.PedSettings.model, 500)
+local ped
+local point = lib.points.new({
+    coords = Config.Coords,
+    distance = 30.0
+})
 
-    local ped = CreatePed(5, Config.PedSettings.model, Config.Coords.x, Config.Coords.y, Config.Coords.z, Config.Heading, false, true)
+function point:onEnter()
+    lib.requestModel(Config.PedSettings.model, 500)
+    ped = CreatePed(5, Config.PedSettings.model, Config.Coords.x, Config.Coords.y, Config.Coords.z, Config.Heading, false, true)
     FreezeEntityPosition(ped, true)
     SetEntityInvincible(ped, true)
     SetBlockingOfNonTemporaryEvents(ped, true)
@@ -20,4 +25,8 @@ CreateThread(function()
         },
     }
     exports.ox_target:addLocalEntity(ped, options)
-end)
+end
+
+function point:onExit()
+    DeleteEntity(ped)
+end
