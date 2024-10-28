@@ -30,3 +30,18 @@ end
 function point:onExit()
     DeleteEntity(ped)
 end
+
+function CreateBlip(settings)
+    if not settings.enabled then return end
+    local blip = AddBlipForCoord(Config.Coords.x, Config.Coords.y, Config.Coords.z)
+    SetBlipSprite(blip, settings.sprite)
+    SetBlipDisplay(blip, settings.display)
+    SetBlipScale(blip, settings.scale)
+    SetBlipColour(blip, settings.color)
+    SetBlipAsShortRange(blip, true)
+    BeginTextCommandSetBlipName('STRING')
+    AddTextComponentSubstringPlayerName(settings.label)
+    EndTextCommandSetBlipName(blip)
+end
+
+CreateBlip(Config.Blip)
